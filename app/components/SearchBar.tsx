@@ -1,6 +1,6 @@
-import { HtmlContext } from "next/dist/server/future/route-modules/app-page/vendored/contexts/entrypoints";
+
 import {ChangeEvent, FormEvent, useState} from "react"
-// import classNames from "classnames";
+
 
 interface SearchBarProps {
     onSearch: (query: string) => void;
@@ -17,21 +17,14 @@ const SearchBar = ({ onSearch }: SearchBarProps) => {
         setQuery(e.target.value);
         onSearch(e.target.value);
       };
-    // const [data, setData] = useState('');
-
-    // const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-    //     setData(e.target.value);
-    // }
-
-
+   
 
     const handleSubmit = (e: FormEvent) => {
         e.preventDefault();
-        onSearch(query); // Call the onSearch function
+        onSearch(query);
     };
 
-    // const inputClass = classNames("border", "border-gray-300", "rounded-l", "py-2", "px-4", "w-full", "text-black", "focus:outline-none", "focus:border-blue-500");
-    
+  
   return (
     <form onSubmit={handleSubmit} className="flex items-center gap-3 w-screen max-w-3xl">
            <input

@@ -1,23 +1,6 @@
-import React from 'react';
+// import { useEffect, useState } from 'react'
 import Image from 'next/image';
-import CoverImage from "../assets/img/804_EC9E91ED9288EC8381EC84B8_mobile.jpg";
-
-// interface ManhwaCardProps {
- 
-//   slug: string;
-//   name: string;
-//   baseURL: string;
-// }
-
-// interface ManhwaCardProps {
-//   provider_webtoon: string;
-//   slug: string;
-//   fullTitle: string;
-//   sourceURL: string;
-//   shortURL: string;
-//   createdAt: string;
-//   updatedAt: string;
-// }
+import LoadingSpinner from './LoadingSpinner ';
 
 
 interface ManhwaCardProps {
@@ -64,9 +47,7 @@ const ManhwaCard = ({
 
   const randomImage = images[Math.floor(Math.random() * images.length)];
 
-
-
-
+  
  
   return (
     <div  className=' bg-white rounded shadow p-4 flex flex-col gap-3  '> 
@@ -75,12 +56,7 @@ const ManhwaCard = ({
          <p className='text-black text-[14px]'>{createdAt}</p>
          <div >
        <h4 className='text-green-500 text-[18px]'> Genres:</h4>
-        {/* {genre.map((g, index) => (
-          <span key={index} className="text-gray-500 text-sm">
-            {g}
-            {index !== genre.length - 1 && ', '}
-          </span>
-        ))} */}{genre && genre.map((g, index) => (
+       {genre && genre.map((g, index) => (
   <span key={index} className="text-gray-500 text-sm">
   {g}
   {index !== genre.length - 1 && ', '}
@@ -97,7 +73,7 @@ const ManhwaCard = ({
         <p className='text-blue-400 text-[12px]'>{synopsis}</p>
      <h2 className='text-2xl text-black font-bold mb-2'>{title}</h2>
       <p className='text-black text-[14px]'>{updatedAt}</p>
-      {/* key={slug} */}
+    
     </div>
   );
 };
