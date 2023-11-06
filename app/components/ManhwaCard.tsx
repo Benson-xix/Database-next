@@ -51,7 +51,8 @@ const ManhwaCard = ({
  
   return (
     <div  className=' bg-white rounded shadow p-4 flex flex-col gap-3 transition hover:scale-105 cursor-pointer '> 
-        <Image src={randomImage} className='flex w-[80%] h-[378px]  mx-auto' alt="" priority  width={193} height={278}  /> 
+        <Image src={randomImage} className=' w-full h-full object-contain' alt="" priority  width={300}
+            height={300} /> 
 
          <p className='text-black text-[14px]'>{createdAt}</p>
          <div >
