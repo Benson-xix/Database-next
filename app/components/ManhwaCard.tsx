@@ -50,7 +50,7 @@ const ManhwaCard = ({
   
  
   return (
-    <div  className=' bg-white rounded shadow p-4 flex flex-col gap-3 transition hover:scale-105 cursor-pointer '> 
+    <div  className=' bg-white rounded shadow p-4 flex flex-col gap-3  cursor-pointer '> 
         <Image src={randomImage} className=' w-full h-full object-contain' alt="" priority  width={300}
             height={300} /> 
 
